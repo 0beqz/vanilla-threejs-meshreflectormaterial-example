@@ -48,14 +48,12 @@ scene.add(plane)
 plane.material = new MeshReflectorMaterial(renderer, camera, scene, plane, {
     resolution: 1024,
     blur: [512, 128],
-    mixBlur: 2,
-    mixStrength: 5.5,
-    mixContrast: 1.2,
+    mixBlur: 2.5,
+    mixContrast: 1.5,
     mirror: 1
 });
 
 plane.material.setValues({
-    roughness: 2.5,
     roughnessMap: new THREE.TextureLoader().load("/roughness.jpg"),
     normalMap: new THREE.TextureLoader().load("/normal.png"),
     normalScale: new THREE.Vector2(0.3, 0.3)
